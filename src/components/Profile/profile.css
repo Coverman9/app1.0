@@ -1,0 +1,26 @@
+.main-pic{
+	background-image: url(../images/main-pic.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 150px 0px;
+	color: #fff;
+	text-align: center;
+}
+.zagolovok{
+	color: white;
+	font-size: 48px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center; 
+display: inline-block;
+transform: scale(1.5,1);
+margin-bottom: 0px;
+}
+.main-text{
+	padding: 0px 250px;
+	color: white;
+font-size: 18px;
+line-height: 33px;
+margin-top: 0px;
+}

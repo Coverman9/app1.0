@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./header.css"
 
 const Header = () => {
@@ -10,12 +11,12 @@ const Header = () => {
 						<img src="images/" alt="" />
 					</a>
 					<nav class="main-nav">
-						<a href="/home">Home</a>
-						<a href="/dialogs">Chat here</a>
-						<a href="#">UI kits</a>
-						<a href="#">Services</a>
-						<a href="#">My works</a>
-						<a href="#">Contact me</a>
+						<NavLink to="/home" className = { navData => navData.isActive ? 'active' : 'main-nav' }>Home</NavLink>
+						<NavLink to="/dialogs" className = { navData => navData.isActive ? 'active' : 'main-nav' }>Chat here</NavLink>
+						<NavLink to="/aboutme" className = { navData => navData.isActive ? 'active' : 'main-nav' }>About Me</NavLink>
+						<a >Services</a>
+						<a >My works</a>
+						<a >Contact me</a>
 					</nav>
 				</div>
 			</header>

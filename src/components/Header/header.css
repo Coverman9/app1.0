@@ -7,3 +7,14 @@
 	display: inline-block;
 	margin-bottom: 10px;
 }
+.main-nav a{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 15px;
+}
+.active a {
+	color: gold;
+}

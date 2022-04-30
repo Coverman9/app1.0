@@ -5,25 +5,22 @@ import AboutMe from './components/AboutMe/aboutme';
 import Profile from './components/Profile/profile';
 import Footer from './components/Footer/footer';
 import Dialogs from './components/Dialogs/Dialogs';
-import { BrowserRouter, Route, } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <div>
-          <Header />
-          <div>
-            <Route path='/dialogs' >
-              <Dialogs/>
-            </Route>
-          </div>
-          {/* <AboutMe />
-          <Profile />
-          <Footer /> */}
-        </div>
-      </BrowserRouter>
-    </div>);
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path='/dialogs' element={<Dialogs/>} />
+          <Route path='/home' element={<Profile/>} />
+          <Route path='/aboutme' element={<AboutMe/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
