@@ -10,10 +10,10 @@ const Header = () => {
 					<a href="" class="logo">
 						<img src="images/" alt="" />
 					</a>
-					<nav class="main-nav">
-						<NavLink to="/home" className = { navData => navData.isActive ? 'active' : 'main-nav' }>Home</NavLink>
-						<NavLink to="/dialogs" className = { navData => navData.isActive ? 'active' : 'main-nav' }>Chat here</NavLink>
-						<NavLink to="/aboutme" className = { navData => navData.isActive ? 'active' : 'main-nav' }>About Me</NavLink>
+					<nav class="navbar">
+						<NavLink to="/home">Home</NavLink>
+						<NavLink to="/dialogs">Chat here</NavLink>
+						<NavLink to="/aboutme">About Me</NavLink>
 						<a >Services</a>
 						<a >My works</a>
 						<a >Contact me</a>
