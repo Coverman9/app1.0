@@ -1,0 +1,15 @@
+.imgContainer>img{
+    width: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.imgContainer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.span{
+    text-decoration: none;
+    color: black;
+}

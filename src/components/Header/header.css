@@ -15,12 +15,11 @@
 	text-transform: uppercase;
 	margin: 0 15px;
 }
-a{
-  color: #2c87f0;
-}
 a:visited{
   color: #fff;
 }
-a:hover, a:active, a:focus{
+.navbar > a:hover, 
+.navbar > a:active, 
+.navbar > a:focus{
   color:gold;
 }

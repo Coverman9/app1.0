@@ -7,15 +7,17 @@ import Footer from './components/Footer/footer';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 
-const App = () => {
+const App = (props) => {
+
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/dialogs/*' element={<Dialogs/>} />
-          <Route path='/home' element={<Profile/>} />
-          <Route path='/aboutme' element={<AboutMe/>} />
+          <Route path='/dialogs/*' element={<Dialogs
+            state={props.appState.chatHere} />} />
+          <Route path='/home' element={<Profile />} />
+          <Route path='/aboutme' element={<AboutMe />} />
         </Routes>
         <Footer />
       </div>
