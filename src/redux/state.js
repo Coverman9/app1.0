@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 let state = {
   chatHere: {
     dialogsData: [
@@ -19,13 +21,14 @@ let state = {
   }
 }
 
-export let addComments = (postComment) => {
-  let newComments = {
-    id: 1,
-    comment: (postComment)
+export let addComment = (postComment) => {
+  let newComment = {
+    id: 5,
+    comment: postComment
   };
 
-  state.reviews.commentsData.push(newComments);
+  state.reviews.commentsData.push(newComment);
+  rerenderEntireTree(state);
 }
 
 export default state;

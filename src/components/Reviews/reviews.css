@@ -1,5 +1,6 @@
 .reviewsBlock{
     margin-left: 20px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(38, 0, 255));
 }
 .addCommentButton{
    

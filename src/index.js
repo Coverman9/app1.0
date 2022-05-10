@@ -1,22 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state, { addComments } from './redux/state';
-import { BrowserRouter } from 'react-router-dom';
+import {rerenderEntireTree} from './render';
+import state from './redux/state';
 
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-
-  <BrowserRouter>
-    <React.StrictMode>
-      <App state={state} addComments={addComments}/>
-    </React.StrictMode>
-  </BrowserRouter>
-);
+rerenderEntireTree(state);
 
 
 // If you want to start measuring performance in your app, pass a function

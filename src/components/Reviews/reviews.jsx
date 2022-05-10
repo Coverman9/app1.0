@@ -1,8 +1,7 @@
 import React from "react";
 import "./reviews.css";
 import Comment from "./comment"
-
-
+import { addComment } from "../../redux/state";
 
 
 
@@ -11,23 +10,22 @@ const Reviews = (props) => {
     let Comments = props.state.commentsData.map(
         c => <Comment comment={c.comment} />)
 
-    let addComment = () => {
-        let text = newComment.current.value;
-        props.addComments(text);
+    let newCommentElement = React.createRef();
+        
+    let addComment1 = () => {
+        let text = newCommentElement.current.value;
+        addComment(text);
     }
-
-    let newComment = React.createRef();
-
 
     return (
         <div className="reviewsBlock">
             <h3>Reviews</h3>
             <div>
                 <div>
-                    <textarea ref={newComment}></textarea>
+                    <textarea ref={newCommentElement}></textarea>
                 </div>
                 <div>
-                    <button className="addCommentButton" onClick={addComment}>Add comment</button>
+                    <button className="addCommentButton" onClick={addComment1}>Add comment</button>
                 </div>
             </div>
             <div>
