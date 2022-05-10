@@ -14,7 +14,7 @@ const Header = () => {
 						<NavLink to="/home">Home</NavLink>
 						<NavLink to="/dialogs">Chat here</NavLink>
 						<NavLink to="/aboutme">About Me</NavLink>
-						<a >Services</a>
+						<NavLink to="/reviews">Reviews</NavLink>
 						<a >My works</a>
 						<a >Contact me</a>
 					</nav>

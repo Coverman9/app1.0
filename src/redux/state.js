@@ -10,7 +10,22 @@ let state = {
       { id: 2, message: 'slm' },
       { id: 3, message: 'hi' }
     ]
+  },
+  reviews: {
+    commentsData: [
+    { id: 1, comment: 'hi how are you' },
+    { id: 2, comment: 'alalalalalal' },
+    { id: 3, comment: 'comment comment comment' }]
   }
+}
+
+export let addComments = (postComment) => {
+  let newComments = {
+    id: 1,
+    comment: (postComment)
+  };
+
+  state.reviews.commentsData.push(newComments);
 }
 
 export default state;

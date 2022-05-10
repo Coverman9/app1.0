@@ -9,3 +9,6 @@
 .messages {
     padding: 10px;
 }
+.addMessageButton{
+    background-color: rgb(237, 186, 55);
+}
