@@ -20,8 +20,8 @@ const App = (props) => {
           <Route path='/home' element={<Profile />} />
           <Route path='/aboutme' element={<AboutMe />} />
           <Route path='/reviews/*' element={<Reviews
-            state={props.state.reviews}
-            addComments = {props.addComments} />} />
+            Reviews={props.state.reviews}
+            addComments = {props.addComment}/>} />
         </Routes>
         <Footer />
       </div>

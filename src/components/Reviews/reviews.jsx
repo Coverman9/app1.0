@@ -6,8 +6,7 @@ import { addComment } from "../../redux/state";
 
 
 const Reviews = (props) => {
-
-    let Comments = props.state.commentsData.map(
+    let Comments = props.Reviews.commentsData.map(
         c => <Comment comment={c.comment} />)
 
     let newCommentElement = React.createRef();
