@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from "../render";
+let rerenderEntireTree = () => {
+  console.log('state changed');
+}
 
 let state = {
   chatHere: {
@@ -24,19 +26,21 @@ let state = {
 
 console.log(state);
 window.state = state;
-export let addComment = () => {
+export const addComment = () => {
   let newComment = {
     id: 5,
     comment: state.reviews.newPostText 
   };
     state.reviews.commentsData.push(newComment);
     state.reviews.newPostText = '';
-  rerenderEntireTree(state);
+  rerenderEntireTree();
 }
-export let updateComment = (newText) => {
+export const updateComment = (newText) => {
     state.reviews.newPostText=newText;
-  rerenderEntireTree(state);
+  rerenderEntireTree();
 }
-
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
+}
 
 export default state;
