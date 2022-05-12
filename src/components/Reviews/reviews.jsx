@@ -1,7 +1,6 @@
 import React from "react";
 import "./reviews.css";
 import Comment from "./comment"
-import { addComment } from "../../redux/state";
 
 
 
@@ -12,8 +11,11 @@ const Reviews = (props) => {
     let newCommentElement = React.createRef();
         
     let addComment1 = () => {
+        props.addComment();
+    }
+    let onPostChange = () => {
         let text = newCommentElement.current.value;
-        addComment(text);
+        props.updateComment(text);
     }
 
     return (
@@ -21,10 +23,12 @@ const Reviews = (props) => {
             <h3>Reviews</h3>
             <div>
                 <div>
-                    <textarea ref={newCommentElement}></textarea>
+                    <textarea onChange={onPostChange} ref={newCommentElement}
+                     value={props.newPostText}/>
                 </div>
                 <div>
-                    <button className="addCommentButton" onClick={addComment1}>Add comment</button>
+                    <button className="addCommentButton" 
+                    onClick={addComment1}>Add comment</button>
                 </div>
             </div>
             <div>

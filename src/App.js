@@ -9,8 +9,8 @@ import { Route, Routes, } from 'react-router-dom';
 import Reviews from './components/Reviews/reviews';
 
 const App = (props) => {
-
   return (
+
       <div className="App">
         <Header />
         <Routes>
@@ -21,7 +21,9 @@ const App = (props) => {
           <Route path='/aboutme' element={<AboutMe />} />
           <Route path='/reviews/*' element={<Reviews
             Reviews={props.state.reviews}
-            addComments = {props.addComment}/>} />
+            addComment = {props.addComment}
+            newPostText = {props.state.reviews.newPostText}
+            updateComment = {props.updateComment}/>} />
         </Routes>
         <Footer />
       </div>

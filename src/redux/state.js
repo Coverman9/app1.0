@@ -17,18 +17,26 @@ let state = {
     commentsData: [
     { id: 1, comment: 'hi how are you' },
     { id: 2, comment: 'alalalalalal' },
-    { id: 3, comment: 'comment comment comment' }]
+    { id: 3, comment: 'comment comment comment' }],
+    newPostText: '123'
   }
 }
 
-export let addComment = (postComment) => {
+console.log(state);
+window.state = state;
+export let addComment = () => {
   let newComment = {
     id: 5,
-    comment: postComment
+    comment: state.reviews.newPostText 
   };
-
-  state.reviews.commentsData.push(newComment);
+    state.reviews.commentsData.push(newComment);
+    state.reviews.newPostText = '';
   rerenderEntireTree(state);
 }
+export let updateComment = (newText) => {
+    state.reviews.newPostText=newText;
+  rerenderEntireTree(state);
+}
+
 
 export default state;
