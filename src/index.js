@@ -1,11 +1,11 @@
 import './index.css';
-import state, { subscribe } from './redux/state';
+import store from './redux/state';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { addComment, updateComment } from './redux/state';
+
 
 
 let rerenderEntireTree = (state) => {
@@ -15,16 +15,16 @@ let rerenderEntireTree = (state) => {
       <BrowserRouter>
         <React.StrictMode>
           <App state={state} 
-          addComment={addComment} 
-          updateComment={updateComment}/>
+          addComment={store.addComment.bind(store)} 
+          updateComment={store.updateComment.bind(store)}/>
         </React.StrictMode>
       </BrowserRouter>
     );
   }
 
-rerenderEntireTree(state);
+rerenderEntireTree(store.getState());
 
-subscribe(rerenderEntireTree);
+store.subscribe(rerenderEntireTree);
 
 
 // If you want to start measuring performance in your app, pass a function
