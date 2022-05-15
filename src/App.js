@@ -14,9 +14,10 @@ const App = (props) => {
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/dialogs/*' element={
-          <Dialogs
-            state={props.state.chatHere} />} />
+          <Route path='/dialogs/*' element={<Dialogs
+            state={props.state.chatHere}
+            dispatch = {props.dispatch}
+            newMessageText = {props.state.chatHere.newMessageText} />} />
           <Route path='/home' element={<Profile />} />
           <Route path='/aboutme' element={<AboutMe />} />
           <Route path='/reviews/*' element={<Reviews
