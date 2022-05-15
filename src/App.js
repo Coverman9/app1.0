@@ -21,9 +21,8 @@ const App = (props) => {
           <Route path='/aboutme' element={<AboutMe />} />
           <Route path='/reviews/*' element={<Reviews
             Reviews={props.state.reviews}
-            addComment = {props.addComment}
-            newPostText = {props.state.reviews.newPostText}
-            updateComment = {props.updateComment}/>} />
+            dispatch = {props.dispatch}
+            newPostText = {props.state.reviews.newPostText}/>} />
         </Routes>
         <Footer />
       </div>

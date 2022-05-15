@@ -1,7 +1,7 @@
 import React from "react";
 import "./reviews.css";
 import Comment from "./comment"
-
+import { addCommentActionCreator, updateCommentActionCreator } from "../../redux/state";
 
 
 const Reviews = (props) => {
@@ -9,13 +9,13 @@ const Reviews = (props) => {
         c => <Comment comment={c.comment} />)
 
     let newCommentElement = React.createRef();
-        
+
     let addComment1 = () => {
-        props.addComment();
+        props.dispatch(addCommentActionCreator());
     }
     let onPostChange = () => {
         let text = newCommentElement.current.value;
-        props.updateComment(text);
+        props.dispatch(updateCommentActionCreator(text));
     }
 
     return (
@@ -24,11 +24,11 @@ const Reviews = (props) => {
             <div>
                 <div>
                     <textarea onChange={onPostChange} ref={newCommentElement}
-                     value={props.newPostText}/>
+                        value={props.newPostText} />
                 </div>
                 <div>
-                    <button className="addCommentButton" 
-                    onClick={addComment1}>Add comment</button>
+                    <button className="addCommentButton"
+                        onClick={addComment1}>Add comment</button>
                 </div>
             </div>
             <div>
