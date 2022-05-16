@@ -1,7 +1,5 @@
-const ADD_COMMENT = 'ADD-COMMENT';
-const UPDATE_COMMENT = 'UPDATE-COMMENT';
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_MESSAGE = 'UPDATE-MESSAGE';
+import chatReducer from "./chat-reducer";
+import reviewsReducer from "./reviews-reducer";
 
 let store = {
   _state: {
@@ -17,7 +15,7 @@ let store = {
         { id: 3, message: 'hi' }
       ],
       newMessageText: 'test'
-      
+
     },
     reviews: {
       commentsData: [
@@ -39,48 +37,15 @@ let store = {
   },
 
   dispatch(action) {
-    //reviews
-    if (action.type === ADD_COMMENT) {
-      let newComment = {
-        id: 5,
-        comment: this._state.reviews.newPostText
-      };
-      this._state.reviews.commentsData.push(newComment);
-      this._state.reviews.newPostText = '';
-      this._callSubscriber(this._state);
-    }
-    else if (action.type === UPDATE_COMMENT) {
-      this._state.reviews.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    }
 
-    
-    //chat here
-    else if (action.type === ADD_MESSAGE) {
-      let newMessage = {
-        id: 4,
-        message: this._state.chatHere.newMessageText
-      };
-      this._state.chatHere.messagesData.push(newMessage);
-      this._state.chatHere.newMessageText = '';
-      this._callSubscriber(this._state);
-    } 
-    else if (action.type === UPDATE_MESSAGE) {
-      this._state.chatHere.newMessageText = action.newText;
-      this._callSubscriber(this._state);
-    }
+    this._state.chatHere = chatReducer(this._state.chatHere, action);
+    this._state.reviews = reviewsReducer(this._state.reviews, action);
+
+    this._callSubscriber(this._state);
+
   }
 }
 
-export const addCommentActionCreator = () => ({type: ADD_COMMENT})
-export const  updateCommentActionCreator = (text) => ({
-  type: UPDATE_COMMENT, newText:text
-})
-
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE})
-export const updateMessageActionCreator = (text) => ({
-  type: UPDATE_MESSAGE, newText:text
-}) 
 
 export default store;
 window.store = store;

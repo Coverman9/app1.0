@@ -1,7 +1,7 @@
 import React from "react";
 import "./reviews.css";
 import Comment from "./comment"
-import { addCommentActionCreator, updateCommentActionCreator } from "../../redux/state";
+import { addCommentActionCreator, updateCommentActionCreator } from "../../redux/reviews-reducer";
 
 
 const Reviews = (props) => {

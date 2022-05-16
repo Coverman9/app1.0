@@ -2,7 +2,7 @@ import React from "react";
 import './Dialogs.css';
 import DialogItem from "./DialogItem/Dialogitem";
 import Message from "./Messages/Messages";
-import { addMessageActionCreator, updateMessageActionCreator } from "../../redux/state";
+import { addMessageActionCreator, updateMessageActionCreator } from "../../redux/chat-reducer";
 
 
 
@@ -29,7 +29,7 @@ const Dialogs = (props) => {
     return (
         <div className="dialogs">
             <div className="dialogItems">
-                {dialogsElements}
+                {dialogsElements}   
             </div>
             <div className="messages">
                 {messagesElements}

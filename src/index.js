@@ -8,17 +8,18 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderEntireTree = (state) => {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(
-  
-      <BrowserRouter>
-        <React.StrictMode>
-          <App state={state} dispatch={store.dispatch.bind(store)}/>
-        </React.StrictMode>
-      </BrowserRouter> 
-    );
-  }
+  root.render(
+
+    <BrowserRouter>
+      <React.StrictMode>
+        <App state={state} dispatch={store.dispatch.bind(store)} />
+      </React.StrictMode>
+    </BrowserRouter>
+  );
+}
 
 rerenderEntireTree(store.getState());
 
