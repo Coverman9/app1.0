@@ -6,11 +6,12 @@ import Profile from './components/Profile/profile';
 import Footer from './components/Footer/footer';
 import Dialogs from './components/Dialogs/Dialogs';
 import { Route, Routes, } from 'react-router-dom';
-import Reviews from './components/Reviews/reviews';
+import ReviewsContainer from './components/Reviews/reviewsContainer';
 
 const App = (props) => {
+  // debugger
+  console.log(props.state.reviews)
   return (
-
       <div className="App">
         <Header />
         <Routes>
@@ -20,10 +21,8 @@ const App = (props) => {
             newMessageText = {props.state.chatHere.newMessageText} />} />
           <Route path='/home' element={<Profile />} />
           <Route path='/aboutme' element={<AboutMe />} />
-          <Route path='/reviews/*' element={<Reviews
-            Reviews={props.state.reviews}
-            dispatch = {props.dispatch}
-            newPostText = {props.state.reviews.newPostText}/>} />
+          <Route path='/reviews/*' element={<ReviewsContainer
+            store = {props.store}/>} />
         </Routes>
         <Footer />
       </div>

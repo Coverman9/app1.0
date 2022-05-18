@@ -1,7 +1,17 @@
 const ADD_COMMENT = 'ADD-COMMENT';
 const UPDATE_COMMENT = 'UPDATE-COMMENT';
 
-const reviewsReducer = (state, action) => {
+
+let initialState = {
+    
+        commentsData: [
+          { id: 1, comment: 'hi how are you' },
+          { id: 2, comment: 'alalalalalal' },
+          { id: 3, comment: 'comment comment comment' }],
+        newPostText: '123'
+      };
+
+const reviewsReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_COMMENT:
