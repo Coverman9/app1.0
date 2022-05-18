@@ -2,28 +2,25 @@ import React from "react";
 import './Dialogs.css';
 import DialogItem from "./DialogItem/Dialogitem";
 import Message from "./Messages/Messages";
-import { addMessageActionCreator, updateMessageActionCreator } from "../../redux/chat-reducer";
 
 
 
 const Dialogs = (props) => {
-
-
-
-    let dialogsElements = props.state.dialogsData.map(
+    console.log(props)
+    let dialogsElements = props.chatHere.dialogsData.map(
         d => <DialogItem name={d.name} id={d.id} img={d.img} />)
 
-    let messagesElements = props.state.messagesData.map(
+    let messagesElements = props.chatHere.messagesData.map(
         m => <Message message={m.message} />
     )
     let newMessageElement = React.createRef();
 
     let addMessage = () => {
-       props.dispatch(addMessageActionCreator());
+       props.addMessage();
     }
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        props.dispatch(updateMessageActionCreator(text));
+        props.messageChange(text);
     }
     
     return (

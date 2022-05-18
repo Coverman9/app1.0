@@ -3,8 +3,6 @@ import { addCommentActionCreator, updateCommentActionCreator } from "../../redux
 import Reviews from "./reviews";
 
 const ReviewsContainer = (props) => {
-// debugger
-console.log(props)
     let state = props.store.getState();
 
     let onAddComment = () => {
