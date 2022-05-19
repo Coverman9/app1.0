@@ -15,12 +15,10 @@ const App = (props) => {
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/dialogs/*' element={<DialogsContainer
-            store = {props.store}/>} />
+          <Route path='/dialogs/*' element={<DialogsContainer/>} />
           <Route path='/home' element={<Profile />} />
           <Route path='/aboutme' element={<AboutMe />} />
-          <Route path='/reviews/*' element={<ReviewsContainer
-            store = {props.store}/>} />
+          <Route path='/reviews/*' element={<ReviewsContainer/>} />
         </Routes>
         <Footer />
       </div>

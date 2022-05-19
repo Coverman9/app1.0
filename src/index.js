@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import StoreContext from './StoreContext';
 
 
 
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderEntireTree = (state) => {
   root.render(
     <BrowserRouter>
-      <React.StrictMode>
-        <App state={state} dispatch={store.dispatch.bind(store)} store = {store} />
-      </React.StrictMode>
+      <StoreContext.Provider value={store}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </StoreContext.Provider>
     </BrowserRouter>
   );
 }
@@ -23,8 +26,8 @@ let rerenderEntireTree = (state) => {
 rerenderEntireTree(store.getState());
 
 store.subscribe(() => {
-let state = store.getState();
-rerenderEntireTree(state);
+  let state = store.getState();
+  rerenderEntireTree(state);
 })
 
 
