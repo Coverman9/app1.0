@@ -9,8 +9,6 @@ import { Route, Routes, } from 'react-router-dom';
 import ReviewsContainer from './components/Reviews/reviewsContainer';
 
 const App = (props) => {
-  // debugger
-  console.log(props.store)
   return (
       <div className="App">
         <Header />

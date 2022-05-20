@@ -4,8 +4,7 @@ import Comment from "./comment"
 
 
 const Reviews = (props) => {
-    console.log(props)
-    let Comments = props.reviews.commentsData.map(
+    let Comments = props.commentsData.map(
         c => <Comment comment={c.comment} />)
 
     let newCommentElement = React.createRef();

@@ -19,12 +19,16 @@ const reviewsReducer = (state = initialState, action) => {
                 id: 5,
                 comment: state.newPostText
             };
-            state.commentsData.push(newComment);
-            state.newPostText = '';
-            return state;
+            return {
+              ...state,
+              commentsData:[...state.commentsData, newComment],
+              newPostText:''
+            }
         case UPDATE_COMMENT:
-            state.newPostText = action.newText;
-            return state;
+          return{
+            ...state,
+            newPostText:action.newText
+          }
         default: return state;
     }
 }
