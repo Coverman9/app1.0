@@ -5,12 +5,7 @@ const SET_USERS = 'SET-USERS';
 
 let initialState = {
   users: [
-    { id: 1, photoUrl: 'https://png.pngtree.com/png-clipart/20210520/ourmid/pngtree-small-eye-handsome-boys-colorless-character-avatar-png-image_3286527.jpg', 
-    followed: true, fullName: 'Aibek', status: 'ya aibek', location: { city: 'Osh', country: 'kg' } },
-    { id: 2, photoUrl: 'https://png.pngtree.com/png-clipart/20210520/ourmid/pngtree-small-eye-handsome-boys-colorless-character-avatar-png-image_3286527.jpg', 
-    followed: true, fullName: 'Maksat', status: 'ya krutoi bala', location: { city: 'Batken', country: 'kg' } },
-    { id: 3, photoUrl: 'https://png.pngtree.com/png-clipart/20210520/ourmid/pngtree-small-eye-handsome-boys-colorless-character-avatar-png-image_3286527.jpg', 
-    followed: false, fullName: 'Bakyt', status: 'ya loh', location: { city: 'Naryn', country: 'kg' } }
+    
   ],
 };
 
