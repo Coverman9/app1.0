@@ -7,10 +7,10 @@ const Header = () => {
 		<div>
 			<header className="header">
 				<div className="container">
-					<a href="" class="logo">
+					<a href=" " className="logo">
 						<img src="images/" alt="" />
 					</a>
-					<nav class="navbar">
+					<nav className="navbar">
 						<NavLink to="/home">Home</NavLink>
 						<NavLink to="/dialogs">Chat here</NavLink>
 						<NavLink to="/aboutme">About Me</NavLink>
