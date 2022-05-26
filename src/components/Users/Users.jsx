@@ -5,23 +5,46 @@ import userimg from "../../assets/images/userimg.png"
 
 class Users extends React.Component {
 
-    constructor(props) {
-        super(props);
-            alert('new');
-            axios.get("https://social-network.samuraijs.com/api/1.0/users")
-                .then(response => {
-                    console.log(response)
-                    this.props.setUsers(response.data.items)
-                });
-        }
-    
+    componentDidMount() {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+            .then(response => {
+                console.log(response)
+                this.props.setUsers(response.data.items);
+                this.props.setTotalUsersCount(response.data.totalCount)
+            });
+    }
+
+    onPageChanged = (pageNumber) => {
+     this.props.setCurrentPage(pageNumber)
+     axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
+            .then(response => {
+                console.log(response)
+                this.props.setUsers(response.data.items)
+            });
+    }
 
     render() {
-        return <div className="usersPage">{
+        let pagesCount = Math.ceil (this.props.totalUserCount / this.props.pageSize)
+        console.log(pagesCount)
+
+        let pages = [];
+        for (let i = 1; i <= pagesCount; i++) {
+            pages.push(i)
+
+        }
+        
+        return <div className="usersPage">
+            <div>
+                { pages.map(p => {
+                    return <span className={this.props.currentPage === p && "selectedPage"}
+                    onClick = {(e) => {this.onPageChanged(p)}}>{p}</span>
+                })}
+            </div>
+            {
                 this.props.users.map(u => <div key={u.id}>
                     <span>
                         <div>
-                            <img src={u.photos.small != null ? u.photos.small : userimg} className='userPhoto' />
+                            <img alt="surot" src={u.photos.small != null ? u.photos.small : userimg} className='userPhoto' />
                         </div>
                         <div>
                             {u.followed ?

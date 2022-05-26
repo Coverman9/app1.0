@@ -7,3 +7,6 @@
 .usersPage {
     background-color: yellowgreen;
 }
+.selectedPage{
+    font-weight: bold;
+}
