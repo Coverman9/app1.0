@@ -15,7 +15,7 @@ const Header = () => {
 						<NavLink to="/dialogs">Chat here</NavLink>
 						<NavLink to="/aboutme">About Me</NavLink>
 						<NavLink to="/reviews">Reviews</NavLink>
-						<NavLink to="/myworks" >My works</NavLink>
+						<NavLink to="/profile" >Profile</NavLink>
 						<NavLink to="/users" >Users</NavLink>
 
 					</nav>

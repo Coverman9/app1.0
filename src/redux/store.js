@@ -14,7 +14,7 @@ let store = {
         { id: 2, message: 'slm' },
         { id: 3, message: 'hi' }
       ],
-      newMessageText: 'test'
+      newMessageText: 'sex'
 
     },
     reviews: {
@@ -22,7 +22,7 @@ let store = {
         { id: 1, comment: 'hi how are you' },
         { id: 2, comment: 'alalalalalal' },
         { id: 3, comment: 'comment comment comment' }],
-      newPostText: '123'
+      newPostText: 'sex'
     }
   },
   _callSubscriber() {
