@@ -1,6 +1,10 @@
-
+.mainImg{
+    height: 250px;
+    width: 100%;
+}
    
 .descriptionBlock {
     padding: 10px;
     padding-left: 40px;
+    
 }

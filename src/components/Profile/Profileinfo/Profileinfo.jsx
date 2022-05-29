@@ -7,13 +7,13 @@ const ProfileInfo = (props) => {
         return <Preloader />
     }
     return (
-        <div>
+        <div className={s.profileDiv}>
             <div>
-                <img
+                <img alt=' ' className={s.mainImg}
                     src='https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80'/>
             </div>
             <div className={s.descriptionBlock}>
-                <img src={props.profile.photos.small} />
+                <img alt=' ' src={props.profile.photos.small} />
                 ava + description
             </div>
         </div>
