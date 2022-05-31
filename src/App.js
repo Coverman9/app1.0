@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import Header from './components/Header/Header';
 import AboutMe from './components/AboutMe/aboutme';
 import Footer from './components/Footer/footer';
 import Home from './components/Home/home';
@@ -9,11 +8,12 @@ import DialogsContainer from './components/Dialogs/DialogsContainer';
 import { Route, Routes } from 'react-router-dom';
 import ReviewsContainer from './components/Reviews/reviewsContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import HeaderContainer from './components/Header/HeaderContainer';
 
 const App = (props) => {
   return (
     <div className="App">
-      <Header />
+      <HeaderContainer />
       <Routes>
         <Route path='/dialogs/*' element={<DialogsContainer />} />
         <Route path='/home' element={<Home />} />

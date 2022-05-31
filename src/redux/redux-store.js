@@ -1,4 +1,5 @@
 import { combineReducers, legacy_createStore } from "redux";
+import authReducer from "./auth-reducer";
 import chatReducer from "./chat-reducer";
 import profileReducer from "./profile-reducer";
 import reviewsReducer from "./reviews-reducer";
@@ -9,7 +10,8 @@ let reducers = combineReducers({
     chatHere : chatReducer,
     reviews : reviewsReducer,
     usersPage : usersReducer,
-    profilePage: profileReducer
+    profilePage: profileReducer,
+    auth: authReducer
 });
 
 let store = legacy_createStore(reducers);
