@@ -5,7 +5,7 @@ const Post = (props) => {
   console.log(props)
   return (
     <div className={s.item}>
-      <img src='https://image.shutterstock.com/image-vector/man-icon-vector-260nw-1040084344.jpg' />
+      <img alt=' ' src='https://image.shutterstock.com/image-vector/man-icon-vector-260nw-1040084344.jpg' />
         { props.message }
           <div>
         <span>like</span> { props.likesCount }

@@ -1,5 +1,5 @@
 import * as axios from "axios";
-
+ 
 const instance = axios.create({
     withCredentials: true,
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
@@ -15,16 +15,12 @@ export const usersAPI = {
                 return response.data
             })
     },
-    followUser(u) {
-        return instance.post(`follow/${u.id}`)
-            .then(response => {
-                return response.data
-            })
+    followUser(userId) {
+        return instance.post(`follow/${userId}`)
+           
     },
-    unfollowUser(u) {
-        return instance.delete(`follow/${u.id}`)
-            .then(response => {
-                return response.data
-            })
+    unfollowUser(userId) {
+        return instance.delete(`follow/${userId}`)
+            
     }
 }
