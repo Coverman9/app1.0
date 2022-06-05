@@ -9,7 +9,8 @@ let mapStateToProps = (state) => {
 
     return {
         chatHere: state.chatHere,
-        newMessageText: state.chatHere.newMessageText
+        newMessageText: state.chatHere.newMessageText,
+        isAuth: state.auth.isAuth
     }
 }
 let mapDispatchToProps = (dispatch) => {
