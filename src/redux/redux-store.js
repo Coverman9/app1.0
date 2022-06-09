@@ -5,14 +5,15 @@ import profileReducer from "./profile-reducer";
 import reviewsReducer from "./reviews-reducer";
 import usersReducer from "./users-reducer";
 import thunkMiddleware from "redux-thunk";
-
+import {reducer as formReducer} from "redux-form";
 
 let reducers = combineReducers({
     chatHere : chatReducer,
     reviews : reviewsReducer,
     usersPage : usersReducer,
     profilePage: profileReducer,
-    auth: authReducer
+    auth: authReducer,
+    form: formReducer
 });
 
 let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware));
