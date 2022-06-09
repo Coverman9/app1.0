@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { addMessageActionCreator, updateMessageActionCreator } from "../../redux/chat-reducer";
+import { addMessageActionCreator } from "../../redux/chat-reducer";
 import Dialogs from "./Dialogs";
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 import { compose } from "redux";
@@ -8,7 +8,6 @@ import { compose } from "redux";
 
 
 let mapStateToProps = (state) => {
-    console.log(state)
 
     return {
         chatHere: state.chatHere,
@@ -17,11 +16,8 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        addMessage: () =>{
-            dispatch(addMessageActionCreator());
-        },
-        onMessageChange: (text) => {
-            dispatch(updateMessageActionCreator(text));
+        addMessage: (newMessageBody) =>{
+            dispatch(addMessageActionCreator(newMessageBody));
         }
     }
 }

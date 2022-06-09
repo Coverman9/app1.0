@@ -1,5 +1,4 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_MESSAGE = 'UPDATE-MESSAGE';
 
 let initialState = {
 
@@ -12,24 +11,18 @@ let initialState = {
     { id: 1, message: 'salam' },
     { id: 2, message: 'slm' },
     { id: 3, message: 'hi' }
-  ],
-  newMessageText: 'test'
+  ]
+  
 
 };
 
 const chatReducer = (state = initialState, action) => {
 
   switch (action.type) {
-    case UPDATE_MESSAGE:
-      return {
-        ...state,
-        newMessageText: action.newText
-      };
       case ADD_MESSAGE:
-      let newMessage = state.newMessageText;
+      let newMessage = action.newMessageBody;
       return {
         ...state,
-        newMessageText: '',
         messagesData: [...state.messagesData, { id: 6, message: newMessage }]
       };
     default:
@@ -37,9 +30,7 @@ const chatReducer = (state = initialState, action) => {
   }
 }
 
-export const addMessageActionCreator = () => ({ type: ADD_MESSAGE })
-export const updateMessageActionCreator = (text) => ({
-  type: UPDATE_MESSAGE, newText: text
-})
+export const addMessageActionCreator = (newMessageBody) => ({ type: ADD_MESSAGE, newMessageBody })
+
 
 export default chatReducer;
