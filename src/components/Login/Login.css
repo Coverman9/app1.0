@@ -2,3 +2,8 @@
     text-align: center;
     background-color: rgba(81, 86, 215, 0.515);
 }
+.formSummaryError {
+    border: red 1px solid;
+    padding: 5px;
+    color: red;
+}   
