@@ -5,3 +5,6 @@
 .posts {
     margin-top: 10px;
 }
+.profilePage {
+    background: linear-gradient(90deg, rgb(248, 247, 253) 0%, rgb(81, 81, 212) 45%, rgb(12, 12, 17) 100%);
+}
