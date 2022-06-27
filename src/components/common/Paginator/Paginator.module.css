@@ -13,6 +13,10 @@
     background-color: antiquewhite;
 
 }
+
+.selectedPage{
+    color: red;
+}
 .button {
     background-color:#177e44;
     color: #fff;

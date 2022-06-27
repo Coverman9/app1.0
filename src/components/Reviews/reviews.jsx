@@ -1,7 +1,8 @@
 import React from "react";
 import "./reviews.css";
 import Comment from "./comment"
-
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Reviews = (props) => {
     let Comments = props.commentsData.map(
@@ -26,8 +27,8 @@ const Reviews = (props) => {
                         value={props.newPostText} />
                 </div>
                 <div>
-                    <button className="addCommentButton"
-                        onClick={onAddComment}>Add comment</button>
+                    <Button variant="info" style={{paddingRight:100}} className="addCommentButton "
+                        onClick={onAddComment}>Add comment</Button>
                 </div>
             </div>
             <div>
