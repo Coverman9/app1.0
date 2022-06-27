@@ -8,3 +8,7 @@
     padding-left: 40px;
     
 }
+.mainPhoto {
+    max-width: 200px;
+    border-radius: 50%;
+}
