@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/app1.0.github.io/static/css/main.e17c8c97.css",
-    "main.js": "/app1.0.github.io/static/js/main.2033574f.js",
+    "main.css": "/app1.0.github.io/static/css/main.00870578.css",
+    "main.js": "/app1.0.github.io/static/js/main.efdc6b6b.js",
     "static/css/346.d5e7a88c.chunk.css": "/app1.0.github.io/static/css/346.d5e7a88c.chunk.css",
     "static/js/346.aabacc77.chunk.js": "/app1.0.github.io/static/js/346.aabacc77.chunk.js",
     "static/css/803.0f0b7f51.chunk.css": "/app1.0.github.io/static/css/803.0f0b7f51.chunk.css",
@@ -11,8 +11,8 @@
     "static/media/preLoader.gif": "/app1.0.github.io/static/media/preLoader.b51ad310d821df2af28a.gif",
     "static/media/userimg.png": "/app1.0.github.io/static/media/userimg.1f1285f0d8abe38af55c.png",
     "index.html": "/app1.0.github.io/index.html",
-    "main.e17c8c97.css.map": "/app1.0.github.io/static/css/main.e17c8c97.css.map",
-    "main.2033574f.js.map": "/app1.0.github.io/static/js/main.2033574f.js.map",
+    "main.00870578.css.map": "/app1.0.github.io/static/css/main.00870578.css.map",
+    "main.efdc6b6b.js.map": "/app1.0.github.io/static/js/main.efdc6b6b.js.map",
     "346.d5e7a88c.chunk.css.map": "/app1.0.github.io/static/css/346.d5e7a88c.chunk.css.map",
     "346.aabacc77.chunk.js.map": "/app1.0.github.io/static/js/346.aabacc77.chunk.js.map",
     "803.0f0b7f51.chunk.css.map": "/app1.0.github.io/static/css/803.0f0b7f51.chunk.css.map",
@@ -20,7 +20,7 @@
     "787.28cb0dcd.chunk.js.map": "/app1.0.github.io/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e17c8c97.css",
-    "static/js/main.2033574f.js"
+    "static/css/main.00870578.css",
+    "static/js/main.efdc6b6b.js"
   ]
 }
